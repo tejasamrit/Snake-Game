@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: fantasy;
+}
+body{
+    background: url(bg.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* opacity: 0.8; */
+}
+.container{
+    width: 90vmin;
+    height: 75vmin;
+    background-color: rgb(182, 250, 80);
+    /* opacity: 0.9; */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    position: absolute;
+}
+.scores-detail{
+    color: black;
+    font-size: 22px;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    /* font-weight: 600; */
+    border-bottom: 5px solid black;
+}
+
+.board{
+    width: 95%;
+    height: 100%;
+    display: grid;
+    background-color: rgb(154 197 3);
+    grid-template: repeat(25, 1fr)/ repeat(25, 1fr);
+    /* border-top: 4px solid black; */
+    margin: 10px 10px;
+    border: 5px solid black;
+}
+
+
+.board .food{
+    background: red;
+    border-radius: 50%;
+    /* border-radius: 3px; */
+}
+
+.board .head{
+    background: black;
+    /* border-radius: 2px; */
+    /* margin: 0.5px; */
+    /* border: 1px solid red; */
+}
+
+#start-message{
+    z-index: 100;
+    position: relative;
+    border: 2px solid black;
+    padding: 30px;
+    background-color: white;
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+    .container{
+        width: 90vmin;
+        height: 115vmin;
+    }
+    .scores-detail{
+        font-size: 12px;
+        padding: 12px 23px;
+    }
+    .board{
+        width: 92%;
+    }
+}
